@@ -1,0 +1,86 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@section scripts{
+    <style type="text/css">
+        #tool {
+            /*position: relative;*/
+            /*width: 100%;*/
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin: 0;
+            z-index: 10;
+            background: #eee;
+        }
+
+        #content {
+            width: 100%;
+            margin: 50px auto;
+        }
+
+            #content .tb {
+                width: 100%;
+            }
+
+        .tb, .tb tr, .tb tr td, .tb tr th {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+            padding: 6px;
+        }
+
+            .tb tr th {
+                background: #808080;
+                color: #ffffff;
+            }
+
+            .tb tr th, .tb tr td {
+                /*word-break: keep-all;
+                white-space: nowrap;
+                overflow: hidden;*/
+            }
+
+            .tb .bg {
+                background: #ddd;
+            }
+
+            .tb .hover {
+                background: #808080;
+                color: #ffffff;
+                cursor: pointer;
+            }
+    </style>
+    <script type="text/javascript">
+        $(function () { App.setPage("People_Index"); App.init({}); });
+    </script>
+}
+<div id="tool">
+    <div id="toolKeyword">
+        <div class="input-group" style="width:40%;margin:10px auto;">
+            <div class=" input-group-btn">
+                <a id="toolToMore" class="form-control">
+                    <span class="glyphicon glyphicon-cog"></span>
+                </a>
+            </div>
+            <input class="form-control" name="keyword" id="keyword" />
+            <div class="input-group-btn">
+                <a id="btnKeyword" class="btn btn-info" style="border-radius:0;">
+                    <span class="glyphicon glyphicon-search"></span>&nbsp; 搜索
+                </a>
+            </div>
+            <div class=" input-group-btn">
+                <a class="form-control">
+                    <label> <input type="checkbox" name="logic" />包含任意关键字</label>
+                </a>
+            </div>
+            <div class=" input-group-btn">
+                <a class="form-control" id="btnAdd">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="content">
+
+</div>

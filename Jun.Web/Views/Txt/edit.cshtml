@@ -1,0 +1,80 @@
+﻿@model Txt
+@{
+    ViewBag.Title = "editTxt";
+}
+@section scripts{
+    <style>
+        #navArea input.labelauty + label {
+            margin: 0px 8px 0px 0px;
+        }
+
+        #navArea input.labelauty:checked + label {
+            background-color: #ff6a00;
+        }
+
+        #tag input.labelauty + label {
+            padding: 3px;
+            margin: 3px 3px 3px 0px;
+        }
+
+        ul li {
+            list-style: none;
+        }
+    </style>
+    <script src="~/Scripts/ckeditor/ckeditor.js"></script>
+    <script src="~/Scripts/ckeditor/config.js"></script>
+    <script src="~/Scripts/ckeditor/sample.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            App.setPage("Txt_Edit"); App.init({});
+            initSample();
+        });
+    </script>
+}
+<form method="post" action="/TxtData/edit" id="fm">
+    <p style="margin:3px 0px;">
+        @if (!String.IsNullOrWhiteSpace(Model.id) && Model.id != "0")
+        {
+            <a class="btn btn-info btn-xs" id="btnSave" style="width:200px;"><span class="glyphicon glyphicon-ok"></span>&nbsp;保存</a>
+        }
+        <a class="btn btn-danger btn-xs" id="btnCalcel" style="width:200px;"><span class="glyphicon glyphicon-remove"></span>&nbsp;取消</a>
+        @if (!String.IsNullOrWhiteSpace(Model.id) && Model.id != "0")
+        {
+            <a class="btn btn-danger  btn-xs pull-right" id="btnDelete"><span class="glyphicon glyphicon-trash"></span>&nbsp;删除</a>
+        }
+        @if (!String.IsNullOrWhiteSpace(Model.id) && Model.id != "0")
+        {
+            <a class="btn btn-default  btn-xs pull-right" id="btnAdd" style="margin-right:5px;"><span class="glyphicon glyphicon-copy"></span>&nbsp;复制</a>
+        }
+        else
+        {
+            <a class="btn btn-info  btn-xs pull-left" id="btnAdd" style="margin-right:5px;width:200px;"><span class="glyphicon glyphicon-ok"></span>&nbsp;保存</a>
+        }
+    </p>
+
+    <ul style="border:1px solid #ccc;padding:10px;">
+
+        <li>
+            <input type="hidden" name="id" id="id" value="@Model.id" />
+        </li>
+
+        <li>
+            <input class="" type="text" name="title" placeholder="" value="@Model.title" style="width:100%;height:30px;margin:5px 0px;padding:4px;" />
+        </li>
+        <li>
+            <span id="navArea"></span>
+            <input type="hidden" id="hidTxtType" name="txttype" value="@Model.txttype" />
+        </li>
+        <li>
+            <span id="tag"></span>
+            <input type="hidden" id="hidTag" name="tag" value="@Model.tag" />
+        </li>
+        @*<li>
+                <textarea class="" name="content" style="height:1000px;width:100%; text-indent:0;padding:4px;">@Model.content</textarea>
+            </li>*@
+        <li>
+            <input type="hidden" id="content" name="content" value="@Model.content" />
+            <textarea cols="80" id="html" name="html" class="ckeditor" rows="10">@Model.html</textarea>    
+        </li>
+    </ul>
+</form>

@@ -1,0 +1,129 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@section scripts {
+    <style type="text/css">
+        #tool {
+            /*position: relative;*/
+            /*width: 100%;*/
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin: 0;
+            z-index: 10;
+            /*background: #eee;*/
+        }
+
+        #content {
+            width: 100%;
+            margin: 50px auto;
+        }
+
+            #content .tb {
+                width: 100%;
+            }
+
+        .tb, .tb tr, .tb tr td, .tb tr th {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+            padding: 6px;
+        }
+
+            .tb tr th {
+                background: #808080;
+                color: #ffffff;
+            }
+
+            .tb tr th, .tb tr td {
+                /*word-break: keep-all;
+                white-space: nowrap;
+                overflow: hidden;*/
+            }
+
+            .tb .bg {
+                background: #ddd;
+            }
+
+            .tb .hover {
+                background: #808080;
+                color: #ffffff;
+                cursor: pointer;
+            }
+
+        .leftnav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            .leftnav li {
+                /*background:#ddd;*/
+                border-bottom: 1px dashed #eee;
+                padding: 5px;
+            }
+            #tag label{margin:0 1px;}
+               #tag input.labelauty + label{
+            padding:3px;
+            margin:2px 2px 2px 0px;
+            
+        }
+               input.labelauty + label{
+                   background:#fff;
+                   color:#3498db;
+                   border:1px solid #ccc;
+               }
+               .fixed-table-toolbar{display:none;}
+    </style>
+    <script type="text/javascript">
+        $(function () {
+           
+            App.setPage("Txt_Index"); App.init({});
+        });
+    </script>
+}
+<div class="ui-layout-center">
+    <input type="hidden" id="txttype" value="" />
+    <table id="TxtTable"></table>
+</div>
+<div class="ui-layout-north">
+    <div id="tool">
+        <div id="toolKeyword">
+            <div class="input-group" style="width:60%;margin:10px auto;">
+                <div class=" input-group-btn">
+                    <a id="toolToMore" class="form-control" href="/navigation/index" target="_blank">
+                        <span class="glyphicon glyphicon-map-marker"></span>
+                    </a>
+                </div>
+                <input class="form-control" name="keyword" id="keyword" />
+                <div class="input-group-btn">
+                    <a id="btnKeyword" class="btn btn-info" style="border-radius:0;">
+                        <span class="glyphicon glyphicon-search"></span>&nbsp; 搜索
+                    </a>
+                </div>
+                <div class=" input-group-btn">
+                    <a class="form-control">
+                        <label> <input type="checkbox" name="logic" />包含任意关键字</label>
+                    </a>
+                </div>
+                <div class=" input-group-btn">
+                    <a class="form-control">
+                        <label> <input type="checkbox" name="logiccontent" checked="checked" />包含内容</label>
+                    </a>
+                </div>
+                <div class=" input-group-btn">
+                    <a class="form-control bg-danger" id="btnAdd">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <span id="tag"></span>
+    </div>
+</div>
+
+<div class="ui-layout-west"><ul class="leftnav" id="navArea"></ul></div>
+@*<div class="ui-layout-north" style=""></div>*@
+@*<div class="ui-layout-south">footer</div>*@
+@*<div class="ui-layout-east">East</div>*@
+
+

@@ -1,0 +1,86 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>revised login form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="~/Scripts/login/css/style.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-2.0.3.min.js"></script>
+    <script src="~/Scripts/jun/param.js"></script>
+    <script src="~/Scripts/jquery.cookie.js"></script>
+    <script src="~/Scripts/login/js/index.js"></script>
+    <script typte="text/javascript">
+        $(function () {
+           
+            $('#btnlogin').click(function () {
+                $.post('/Account/LoginData', { user: $('#username').val(), pwd: $('#pwd').val() }, function (json) {
+                    if (json.IsSuccess) {
+                        var returnurl = $.request("ReturnUrl");
+                        if (returnurl == "" || returnurl == null || returnurl == "null" || returnurl == "undefined") {
+                            returnurl = "/Home/index";
+                        }
+                        $.cookie('user_cookie', $('#username').val(), { expires: 7, path: '/' });
+                        $.cookie('pwd_cookie', $('#pwd').val(), { expires: 7, path: '/' });
+                        location.href = returnurl;
+                    } else {
+                        alert("用户名或密码错误,请重新输入!");
+                        $('#username').focus().select();
+                    }
+                });
+            });
+           
+            $("#username").keyup(function (event) {
+                var keycode = event.which;
+                if (keycode == 13) {
+                    $('#btnlogin').click();
+                }
+            });
+            $("#pwd").keyup(function (event) {
+                var keycode = event.which;
+                if (keycode == 13) {
+                    $('#btnlogin').click();
+                }
+            });
+            $('#username').val($.cookie('user_cookie'));
+            $('#pwd').val($.cookie('pwd_cookie'));
+            if ($.cookie('user_cookie') != '') {
+                $('#btnlogin').click();
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="logo">
+        <h1><i> STARK INDUSTRIES</i></h1>
+    </div>
+    <section class="stark-login">
+        <div class="form">
+            <div id="fade-box">
+                <input type="text" name="username" id="username" placeholder="Username" required>
+                <input type="password" placeholder="Password" id="pwd" required>
+                <button id="btnlogin">Log In</button>
+            </div>
+        </div>
+        <div class="hexagons">
+        </div>
+    </section>
+    <div id="circle1">
+        <div id="inner-cirlce1">
+            <h2> </h2>
+        </div>
+    </div>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+</body>
+</html>

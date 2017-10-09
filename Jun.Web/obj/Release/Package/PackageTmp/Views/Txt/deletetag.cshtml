@@ -1,0 +1,26 @@
+﻿@model List<Tag>
+@{
+    ViewBag.Title = "删除标签";
+}
+<script type="text/javascript">
+    function DeleteTag(id) {
+        $.post('/txtData/DeleteTag', { id: id }, function () {
+            location.reload();
+        });
+    };
+</script>
+<table>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <a>@item.title</a>
+            </td>
+            <td>
+                <a onclick="DeleteTag(@item.id)">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </a>
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,148 @@
+﻿@model People
+@{
+    ViewBag.Title = "editserver";
+}
+@section scripts{
+    <script type="text/javascript">
+        $(function () { App.setPage("People_Edit"); App.init({}); });
+    </script>
+}
+<form method="post" action="/peopleData/edit" id="fm">
+    <div class="form-horizontal">
+        <input type="hidden" name="id" id="id" value="@Model.ID" />
+        <div class="form-group">
+            <label class="control-label col-sm-2">ChineseName</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="ChineseName" placeholder="" value="@Model.ChineseName" />
+            </div>
+            <label class="control-label col-sm-2">EnglishName</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="EnglishName" placeholder="" value="@Model.EnglishName" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">MobilePhone</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="MobilePhone" placeholder="" value="@Model.MobilePhone" />
+            </div>
+            <label class="control-label col-sm-2">Phone</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="Phone" placeholder="" value="@Model.Phone" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Email</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="Email" placeholder="" value="@Model.Email" />
+            </div>
+            <label class="control-label col-sm-2">QQ</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="QQ" placeholder="" value="@Model.QQ" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">NickName</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="NickName" placeholder="" value="@Model.NickName" />
+            </div>
+            <label class="control-label col-sm-2">CurrentCity</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="CurrentCity" placeholder="" value="@Model.CurrentCity" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Relationship</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="Relationship" placeholder="" value="@Model.Relationship" />
+            </div>
+            <label class="control-label col-sm-2">RelationshipCompany</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="RelationshipCompany" placeholder="" value="@Model.RelationshipCompany" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">MarriageTime</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="MarriageTime" placeholder="" value="@Model.MarriageTime" />
+            </div>
+            <label class="control-label col-sm-2">Address_Registered</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="Address_Registered" placeholder="" value="@Model.Address_Registered" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Gender</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="Gender" placeholder="" value="@Model.Gender" />
+            </div>
+            <label class="control-label col-sm-2">Birthday</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="Birthday" placeholder="" value="@Model.Birthday" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Address_Post</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="Address_Post" placeholder="" value="@Model.Address_Post" />
+            </div>
+            <label class="control-label col-sm-2">PostalCode</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="PostalCode" placeholder="" value="@Model.PostalCode" />
+            </div>
+        </div>
+   
+        <div class="form-group">
+            <label class="control-label col-sm-2">Hobby</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="Hobby" placeholder="" value="@Model.Hobby" />
+            </div>
+            <label class="control-label col-sm-2">IDNumber</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="IDNumber" placeholder="" value="@Model.IDNumber" />
+            </div>
+        </div>
+  
+        <div class="form-group">
+            <label class="control-label col-sm-2">Homepage</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="Homepage" placeholder="" value="@Model.Homepage" />
+            </div>
+            <label class="control-label col-sm-2">Keyworks</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="Keyworks" placeholder="" value="@Model.Keyworks" />
+            </div>
+        </div>
+        <div class="form-group" style="display:none;">
+            <label class="control-label col-sm-2">CreateTime</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="CreateTime" placeholder="" value="@Model.CreateTime" />
+            </div>
+            <label class="control-label col-sm-2">UpdateTime</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" name="UpdateTime" placeholder="" value="@Model.UpdateTime" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Remarks</label>
+            <div class="col-sm-8">
+                <input class="form-control" type="text" name="Remarks" placeholder="" value="@Model.Remarks" />
+            </div>
+            <label class="control-label col-sm-2"></label>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2"></label>
+            <div class="col-sm-10">
+                @if (!String.IsNullOrWhiteSpace(Model.ID) && Model.ID != "0")
+                {
+                    <a class="btn btn-info" id="btnSave"><span class="glyphicon glyphicon-floppy-saved">&nbsp;</span>更新</a>
+                }
+                <a class="btn btn-default" id="btnAdd"><span class="glyphicon glyphicon-plus">&nbsp;</span>新增</a>
+                @if (!String.IsNullOrWhiteSpace(Model.ID) && Model.ID != "0")
+                {
+                    <a class="btn btn-danger" id="btnDelete"><span class="glyphicon glyphicon-trash">&nbsp;</span>删除</a>
+                }
+            </div>
+            <label class="control-label col-sm-2"></label>
+        </div>
+    </div>
+</form>

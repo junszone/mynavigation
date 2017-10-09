@@ -1,0 +1,100 @@
+﻿@model Server
+@{
+    ViewBag.Title = "editserver";
+}
+@section scripts{
+    <script type="text/javascript">
+        $(function () { App.setPage("Server_Edit"); App.init({}); });
+    </script>
+}
+<form method="post" action="/serverData/edit" id="fm">
+    <div class="form-horizontal">
+        <input type="hidden" name="id" id="id" value="@Model.id" />
+        <div class="form-group">
+            <label class="control-label col-sm-2">level</label>
+            <div class="col-sm-8">
+                <input class="form-control" type="text" name="level" placeholder="official/test/tool" value="@Model.level" />
+            </div>
+            <label class="control-label col-sm-2"></label>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">type</label>
+            <div class="col-sm-8">
+                <input class="form-control" type="text" name="type" placeholder="web/app" value="@Model.type" />
+            </div>
+            <label class="control-label col-sm-2"></label>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">name</label>
+            <div class="col-sm-8">
+                <input class="form-control" type="text" name="name" placeholder="" value="@Model.name" />
+            </div>
+            <label class="control-label col-sm-2"></label>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">url</label>
+            <div class="col-sm-8">
+                <input class="form-control" type="text" name="url" placeholder="http://" value="@Model.url" />
+            </div>
+            <label class="control-label col-sm-2"></label>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">ip</label>
+            <div class="col-sm-8">
+                <input class="form-control" type="text" name="ip" placeholder="" value="@Model.ip" />
+            </div>
+            <label class="control-label col-sm-2"></label>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">port</label>
+            <div class="col-sm-8">
+                <input class="form-control" type="text" name="port" placeholder="" value="@Model.port" />
+            </div>
+            <label class="control-label col-sm-2"></label>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">user</label>
+            <div class="col-sm-8">
+                <input class="form-control" type="text" name="user" placeholder="" value="@Model.user" />
+            </div>
+            <label class="control-label col-sm-2"></label>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">pwd</label>
+            <div class="col-sm-8">
+                <input class="form-control" type="text" name="pwd" placeholder="" value="@Model.pwd" />
+            </div>
+            <label class="control-label col-sm-2"></label>
+        </div><div class="form-group">
+            <label class="control-label col-sm-2">content</label>
+            <div class="col-sm-8">
+                <input class="form-control" type="text" name="content" placeholder="" value="@Model.content" />
+            </div>
+            <label class="control-label col-sm-2"></label>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">description</label>
+            <div class="col-sm-8">
+                <textarea class="form-control" name="description" style="height:100px;">
+                    @Model.description
+                </textarea>
+            </div>
+            <label class="control-label col-sm-2"></label>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2"></label>
+            <div class="col-sm-10">
+                @if (!String.IsNullOrWhiteSpace(Model.id) && Model.id != "0")
+                {
+                    <a class="btn btn-info" id="btnSave"><span class="glyphicon glyphicon-floppy-saved">&nbsp;</span>更新</a>
+                }
+                <a class="btn btn-default" id="btnAdd"><span class="glyphicon glyphicon-plus">&nbsp;</span>新增</a>
+                @if (!String.IsNullOrWhiteSpace(Model.id) && Model.id != "0")
+                {
+                    <a class="btn btn-danger" id="btnDelete"><span class="glyphicon glyphicon-trash">&nbsp;</span>删除</a>
+                }
+            </div>
+            <label class="control-label col-sm-2"></label>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,12 @@
+D:\Project\Jun\Jun.Life\Career.Utility\bin\Release\Career.Utility.dll
+D:\Project\Jun\Jun.Life\Career.Utility\bin\Release\Career.Utility.pdb
+D:\Project\Jun\Jun.Life\Career.Utility\bin\Release\Aspose.Pdf.xml
+D:\Project\Jun\Jun.Life\Career.Utility\obj\Release\Career.Utility.csprojResolveAssemblyReference.cache
+D:\Project\Jun\Jun.Life\Career.Utility\obj\Release\Career.Utility.dll
+D:\Project\Jun\Jun.Life\Career.Utility\obj\Release\Career.Utility.pdb
+E:\Jun.Project\trunk\Career.Utility\bin\Release\Career.Utility.dll
+E:\Jun.Project\trunk\Career.Utility\bin\Release\Career.Utility.pdb
+E:\Jun.Project\trunk\Career.Utility\bin\Release\Aspose.Pdf.xml
+E:\Jun.Project\trunk\Career.Utility\obj\Release\Career.Utility.csprojResolveAssemblyReference.cache
+E:\Jun.Project\trunk\Career.Utility\obj\Release\Career.Utility.dll
+E:\Jun.Project\trunk\Career.Utility\obj\Release\Career.Utility.pdb

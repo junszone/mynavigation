@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@section scripts {
+    <style>
+        ol li {
+            margin: 8px;
+        }
+
+            ol li p {
+                padding: 8px;
+                margin: 0px;
+            }
+
+            ol li a {
+                margin: 8px 3px;
+            }
+    </style>
+    <script type="text/javascript">
+        $(function () { App.setPage("Navigation_Index"); App.init({}); });
+    </script>
+}
+<a style="display:none;" id="btnLoadNav" onclick="$.jun.loadNav();">刷新页面</a>
+<div id="tool">
+    <div id="toolKeyword">
+        <div class="input-group" style="width:40%;margin:10px auto;">
+            <div class=" input-group-btn">
+                <a class="form-control" href="/txt/index">
+                    <span class="glyphicon glyphicon-zoom-in"></span>&nbsp;
+                </a>
+            </div>
+            <input class="form-control" name="keyword" id="keyword" />
+            <div class="input-group-btn">
+                <a id="btnKeyword" class="btn btn-info" style="border-radius:0;">
+                    <span class="glyphicon glyphicon-search"></span>&nbsp; 搜索
+                </a>
+            </div>
+            <div class=" input-group-btn" style="display:none;">
+                <a class="form-control" href="/People/index">
+                    <span class="glyphicon glyphicon-user"></span>&nbsp;
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<ol id="nav"></ol>
+

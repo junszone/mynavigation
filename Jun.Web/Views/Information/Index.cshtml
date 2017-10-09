@@ -1,0 +1,124 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@section scripts {
+    <style type="text/css">
+        #tool {
+            /*position: relative;*/
+            /*width: 100%;*/
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin: 0;
+            z-index: 10;
+            background: #eee;
+        }
+
+        #content {
+            width: 100%;
+            margin: 50px auto;
+        }
+
+            #content .tb {
+                width: 100%;
+            }
+
+        .tb, .tb tr, .tb tr td, .tb tr th {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+            padding: 6px;
+        }
+
+            .tb tr th {
+                background: #808080;
+                color: #ffffff;
+            }
+
+            .tb tr th, .tb tr td {
+                /*word-break: keep-all;
+                white-space: nowrap;
+                overflow: hidden;*/
+            }
+
+            .tb .bg {
+                background: #ddd;
+            }
+
+            .tb .hover {
+                background: #808080;
+                color: #ffffff;
+                cursor: pointer;
+            }
+    </style>
+    <script type="text/javascript">
+        $(function () { App.setPage("Information_Index"); App.init({}); });
+    </script>
+}
+<div style="width:1280px;margin:0 auto;">
+    <div id="tool">
+        <div id="toolKeyword">
+            <div class="input-group" style="width:40%;margin:10px auto;">
+                <div class=" input-group-btn">
+                    <a id="toolToMore" class="form-control">
+                        <span class="glyphicon glyphicon-cog"></span>
+                    </a>
+                </div>
+                <input class="form-control" name="keyword" id="keyword" />
+                <div class="input-group-btn">
+                    <a id="btnKeyword" class="btn btn-info" style="border-radius:0;">
+                        <span class="glyphicon glyphicon-search"></span>&nbsp; 搜索
+                    </a>
+                </div>
+                <div class=" input-group-btn">
+                    <a class="form-control">
+                        <label> <input type="checkbox" name="logic" />包含任意关键字</label>
+                    </a>
+                </div>
+                <div class=" input-group-btn">
+                    <a class="form-control" id="btnAdd">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="toolDetail" style="display:none;">
+            <span>level</span>
+            <select name="level">
+                <option value="">-请选择-</option>
+                <option value="official">official</option>
+                <option value="test">test</option>
+            </select>
+            <span>type</span>
+            <select name="type">
+                <option value="">-请选择-</option>
+                <option value="web">web</option>
+                <option value="mstsc">mstsc</option>
+                <option value="sqlserver">sqlserver</option>
+                <option value="mysql">mysql</option>
+                <option value="app">app</option>
+                <option value="ip">ip</option>
+                <option value="phonemeeting">phonemeeting</option>
+                <option value="wifi">wifi</option>
+            </select>
+            <span>name</span>
+            <input type="text" name="name" />
+            <span>url</span>
+            <input type="text" name="url" />
+            <span>ip</span>
+            <input type="text" name="ip" />
+            <span>user</span>
+            <input type="text" name="user" />
+            <span>content</span>
+            <input type="text" name="content" />
+            <span>description</span>
+            <input type="text" name="description" />
+            <a id="btnSearch"><span class="glyphicon glyphicon-search">&nbsp;</span>Search</a><a id="btnToKeywod">关键字搜索</a>
+        </div>
+
+    </div>
+    <div id="content">
+
+    </div>
+    <table id="InformationTable"></table>
+</div>
+

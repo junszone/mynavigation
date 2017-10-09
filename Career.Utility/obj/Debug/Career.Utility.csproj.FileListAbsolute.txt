@@ -1,0 +1,10 @@
+D:\Project\Jun\Jun.Life\Career.Utility\bin\Debug\Career.Utility.dll
+D:\Project\Jun\Jun.Life\Career.Utility\bin\Debug\Career.Utility.pdb
+D:\Project\Jun\Jun.Life\Career.Utility\obj\Debug\Career.Utility.dll
+D:\Project\Jun\Jun.Life\Career.Utility\obj\Debug\Career.Utility.pdb
+D:\Project\Jun\Jun.Life\Career.Utility\obj\Debug\Career.Utility.csprojResolveAssemblyReference.cache
+E:\Jun.Project\trunk\Career.Utility\bin\Debug\Career.Utility.dll
+E:\Jun.Project\trunk\Career.Utility\bin\Debug\Career.Utility.pdb
+E:\Jun.Project\trunk\Career.Utility\obj\Debug\Career.Utility.csprojResolveAssemblyReference.cache
+E:\Jun.Project\trunk\Career.Utility\obj\Debug\Career.Utility.dll
+E:\Jun.Project\trunk\Career.Utility\obj\Debug\Career.Utility.pdb

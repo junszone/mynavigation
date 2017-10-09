@@ -1,0 +1,26 @@
+﻿@model List<TxtType>
+@{
+    ViewBag.Title = "删除分类";
+}
+<script type="text/javascript">
+    function DeleteType(id) {
+        $.post('/txtData/DeleteType', { id: id }, function () {
+            location.reload();
+        });
+    };
+</script>
+<table>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <a>@item.title</a>
+            </td>
+            <td>
+                <a onclick="DeleteType(@item.id)">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </a>
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,10 @@
+D:\Project\Jun\Jun.Life\Jun.Entity\bin\Release\Jun.Entity.dll
+D:\Project\Jun\Jun.Life\Jun.Entity\bin\Release\Jun.Entity.pdb
+D:\Project\Jun\Jun.Life\Jun.Entity\obj\Release\Jun.Entity.dll
+D:\Project\Jun\Jun.Life\Jun.Entity\obj\Release\Jun.Entity.pdb
+D:\Project\Jun\Jun.Life\Jun.Entity\obj\Release\Jun.Entity.csprojResolveAssemblyReference.cache
+E:\Jun.Project\trunk\Jun.Entity\bin\Release\Jun.Entity.dll
+E:\Jun.Project\trunk\Jun.Entity\bin\Release\Jun.Entity.pdb
+E:\Jun.Project\trunk\Jun.Entity\obj\Release\Jun.Entity.csprojResolveAssemblyReference.cache
+E:\Jun.Project\trunk\Jun.Entity\obj\Release\Jun.Entity.dll
+E:\Jun.Project\trunk\Jun.Entity\obj\Release\Jun.Entity.pdb
